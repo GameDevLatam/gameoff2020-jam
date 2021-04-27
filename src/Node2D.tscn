@@ -7,13 +7,13 @@
 [ext_resource path="res://astronaut.png" type="Texture" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 376.324
+radius = 803.051
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 142.612
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 252.87
+radius = 325.836
 
 [sub_resource type="CircleShape2D" id=4]
 radius = 74.6437
@@ -44,6 +44,9 @@ color_ramp = SubResource( 7 )
 [node name="Node2D" type="Node2D"]
 
 [node name="StaticBody2D" type="RigidBody2D" parent="."]
+collision_layer = 1024
+collision_mask = 2048
+mode = 1
 mass = 1000.0
 gravity_scale = 0.0
 angular_velocity = 5.0
@@ -52,6 +55,7 @@ script = ExtResource( 4 )
 [node name="Area2D" type="Area2D" parent="StaticBody2D"]
 space_override = 1
 gravity_point = true
+gravity_distance_scale = 0.001
 gravity_vec = Vector2( 0, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
@@ -70,7 +74,10 @@ scale = Vector2( 11.4348, 11.4348 )
 texture = ExtResource( 3 )
 
 [node name="StaticBody2D2" type="RigidBody2D" parent="."]
-position = Vector2( 338.847, -396.972 )
+position = Vector2( 217.464, -330.002 )
+collision_layer = 1024
+collision_mask = 2048
+mode = 1
 mass = 1000.0
 linear_damp = 0.0
 angular_velocity = 1.002
@@ -79,6 +86,7 @@ script = ExtResource( 4 )
 [node name="Area2D" type="Area2D" parent="StaticBody2D2"]
 space_override = 1
 gravity_point = true
+gravity_distance_scale = 0.001
 gravity_vec = Vector2( 0, 0 )
 gravity = 49.0
 
@@ -98,7 +106,8 @@ scale = Vector2( 7.64169, 7.64169 )
 texture = ExtResource( 3 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2( -56.1973, 285.654 )
+position = Vector2( 22.8047, -168.358 )
+collision_layer = 3073
 mode = 2
 mass = 20.0
 can_sleep = false

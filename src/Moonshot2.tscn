@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Planet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://astronaut.png" type="Texture" id=2]
+[ext_resource path="res://planet.png" type="Texture" id=3]
+[ext_resource path="res://Cannon.gd" type="Script" id=4]
+
+[node name="Node2D" type="Node2D"]
+rotation = -0.00124509
+
+[node name="cannon" type="Node2D" parent="."]
+position = Vector2( 14.4405, -19.5603 )
+script = ExtResource( 4 )
+
+[node name="pivot" type="Position2D" parent="cannon"]
+
+[node name="line" type="Sprite" parent="cannon/pivot"]
+position = Vector2( 0, -30 )
+rotation = -3.14159
+scale = Vector2( 0.036, 1 )
+texture = ExtResource( 3 )
+
+[node name="astronaut" type="Sprite" parent="cannon"]
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 12.5028, 70.4966 )
+mode = 1
+
+[node name="StaticBody2D4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 247.852, -287.9 )
+mode = 1
+
+[node name="StaticBody2D5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 592.345, -14.4477 )
+mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 228.012, -163.567 )
+current = true
